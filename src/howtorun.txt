@@ -1,0 +1,117 @@
+Aton Line APK
+
+=======================================
+
+Download APK file directly from Google Play
+https://play.google.com/store/apps/details?id=ru.aton.financeapp
+with "APK Downloader" chrome-extension
+https://chrome.google.com/webstore/detail/apk-downloader/fgljidimohbcmjdabiecfeikkmpbjegm/related?hl=en
+and rename it to atonline.apk
+
+=======================================
+
+Install Android Studio and SDK tools for Windows (x64)
+https://developer.android.com/studio
+
+SDK tools
+C:\Users\root\AppData\Local\Android\Sdk\platform-tools
+
+File > Settings > Appearance & Behavior > System Settings > Android SDK > SDK Tools
+Android Emulator
+
+AVD Manager > Make: Pixel 2, API 25, 1080x1920: 420dpi, Android 7.1.1 > Run device
+
+
+Drag an APK file onto the emulator screen.
+Make an exploratory testing session.
+
+Useful links:
+https://developer.android.com/reference/android/view/KeyEvent
+
+
+=======================================
+
+CMD / Git-Bash
+
+adb start-server
+adb kill-server
+adb devices
+
+adb shell "dumpsys window windows | grep -E 'mCurrentFocus'"
+
+mCurrentFocus=Window{63a0b0 u0 ru.aton.financeapp/ru.aton.finance.activity.LoginActivity}
+ru.aton.financeapp
+ru.aton.finance.activity.LoginActivity
+
+
+=======================================
+
+Install Node.js LTS-version for Windows (x64)
+https://nodejs.org/en/#download
+
+=======================================
+
+Install Java SE Development Kit 8 for Windows (x64)
+https://www.oracle.com/technetwork/java/javaee/downloads/jdk8-downloads-2133151.html
+
+=======================================
+
+Install Appium test automation framework for Windows (x64)
+http://appium.io/
+
+https://github.com/appium/appium-desktop/releases/tag/v1.12.1
+appium-desktop-setup-1.12.1.exe
+
+Use Appium Desired Capabilities
+http://appium.io/docs/en/writing-running-appium/caps/
+
+Run Appium as administrator
+
+Edit configurations:
+
+ANDROID_HOME
+C:\Users\root\AppData\Local\Android\Sdk
+
+JAVA_HOME
+C:\Program Files\Java\jdk1.8.0_211
+
+
+Start Appium server
+http://localhost:4723
+
+Start Inspector Session (upper right)
+
+Desired Capabilities > Edit Raw JSON Representation
+{
+  "automationName": "UiAutomator2",
+  "platformName": "Android",
+  "deviceName": "Android Emulator",
+  "appPackage": "ru.aton.financeapp",
+  "appActivity": "ru.aton.finance.activity.LoginActivity",
+  "app": "C:\\Users\\root\\Desktop\\atonline.apk"
+}
+
+Save As...
+Start Session
+
+Explore and find Elements
+
+Useful links:
+http://appium.io/docs/en/commands/device/files/push-file/
+http://appium.io/docs/en/commands/device/app/close-app/
+
+=======================================
+
+Install Python 3.x for Windows (x64)
+https://www.python.org/downloads/
+
+Install PyCharm for Windows (x64)
+https://www.jetbrains.com/pycharm/
+
+Create New Project and Install Appium Python Client:
+PycharmProject window > File > Settings > Project > Interpreter
+Click "+" than find and install package: Appium-Python-Client
+Or install global: pip install Appium-Python-Client
+
+=======================================
+
